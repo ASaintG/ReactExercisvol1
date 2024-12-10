@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
+
+.product-details {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 2%;
+    }
+}
+
+.containerDetails {
+    display: flex; /* Flex para alinear la imagen y la descripción */
+    justify-content: space-around; /* Espacio entre los elementos */
+    align-items: flex-start; /* Alinear los elementos al inicio */
+    gap: 10px; /* Espacio entre la imagen y la descripción */
+    margin: 20px 0;
+    margin-left: 1.5rem;
+
+    /* Media query para pantallas pequeñas */
+    @media (max-width: 768px) {
+        flex-direction: column; /* En pantallas pequeñas, ponemos los elementos en columna */
+        align-items: center;
+        margin-left: 0;
+    }
+}
+
+.main-image {
+    width: 35%; /* 40% para la imagen */
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Media query para pantallas pequeñas */
+    @media (max-width: 768px) {
+        width: 80%; /* En pantallas pequeñas, la imagen ocupa el 80% del contenedor */
+    }
+}
+
+.description-container {
+    width: 50%; /* 50% para la descripción */
+    margin-top: 1.5rem;
+    
+    p {
+        text-align: justify;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* Media query para pantallas pequeñas */
+    @media (max-width: 768px) {
+        width: 90%; /* La descripción ocupa más espacio en pantallas pequeñas */
+    }
+}
+
+.images-container {
+    width: 40%;
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin: 20px 0 0 7%;
+    
+    /* Media query para pantallas pequeñas */
+    @media (max-width: 768px) {
+        width: 90%; 
+        margin-left: 0;
+        justify-content: center; 
+    }
+}
+
+.image-item {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    /* Imagen seleccionada */
+    &.selected img {
+        border: 2px solid #007bff;
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }
+}
+
+p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+.moreinfo {
+    width: 80%;
+    margin: 5% 10% 5% 10%;
+    
+    h3 {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        padding: 10px;
+    }
+
+    button {
+        width: 25%; 
+        margin: 0 auto; 
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        display: block; 
+        
+        &:hover {
+            background-color: darken(#007bff, 10%);
+            transform: scale(1.1);
+        }
+    }
+
+    /* Media query para pantallas pequeñas */
+    @media (max-width: 768px) {
+        width: 90%; /* Hacer el contenedor más ancho en pantallas pequeñas */
+        margin: 5% 5% 5% 5%; /* Reducir los márgenes */
+        
+        h3 {
+            width: 90%; /* Hacer el título más ancho */
+        }
+        
+        button {
+            width: 50%; /* El botón ocupa más espacio en pantallas pequeñas */
+        }
+    }
+}

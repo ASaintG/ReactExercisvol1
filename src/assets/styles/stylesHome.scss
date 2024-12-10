@@ -1,0 +1,196 @@
+$card-bg: #f9f9f9;
+$text-color: #333;
+$bg: #f0f0f0;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
+
+body{
+    background-color: $bg;
+}
+// Contenedor principal
+.container{
+    width: 80%;
+    margin: auto;
+    
+}
+
+// Título
+.title{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 50px 0;
+
+    h1{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+}
+
+// Información
+.information{
+    width: 80%;
+    margin: 0 10% 45px 10%;
+    
+    h2{
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        padding: 5px;
+    }
+}
+
+// Sección de características
+.features{
+    width: 80%;
+    margin: auto;
+
+    .card {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap; // Permite que las tarjetas se ajusten en pantallas más pequeñas
+    }
+
+    .feature {
+        background-color: $card-bg;
+        border: 1px solid lighten($card-bg, 10%);
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+        color: $text-color;
+        width: 200px;
+        cursor:pointer;
+        transition: transform 0.3s;
+        margin: 10px; // Espaciado entre las tarjetas
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        p {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        &:hover {
+            transform: scale(1.1); /* Aumenta el tamaño de la tarjeta */
+        }
+    }
+}
+
+
+.moreinfo{
+    width: 80%;
+    margin: 5% 10% 5% 10%;
+    
+    h3{
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        padding: 10px;
+    }
+
+    button {
+        width: 25%; 
+        margin: 0 auto; /* Esto asegura que el botón se centre horizontalmente */
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        display: block; /* Hace que el botón se centre con margin: auto */
+        
+        &:hover {
+            background-color: darken(#007bff, 10%);
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+
+// Pantallas pequeñas (móviles)
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    .title h1 {
+        font-size: 2rem; // Reducción del tamaño de fuente
+    }
+
+    .information h2 {
+        width: 90%; // Se ajusta el ancho
+        font-size: 1.2rem;
+    }
+
+    .feature {
+        width: 100%; // Las tarjetas ocupan el 100% del ancho
+        margin: 10px 0; // Espaciado vertical
+    }
+
+    .moreinfo button {
+        width: 80%; // Botón más grande en pantallas pequeñas
+    }
+}
+
+// Pantallas medianas (tabletas)
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        width: 85%;
+    }
+
+    .title h1 {
+        font-size: 2.5rem;
+    }
+
+    .information h2 {
+        width: 80%;
+        font-size: 1.4rem;
+    }
+
+    .feature {
+        width: 45%; // Las tarjetas ocupan el 45% del ancho
+    }
+
+    .moreinfo button {
+        width: 60%; // Botón con tamaño intermedio
+    }
+}
+
+// Pantallas grandes (escritorios)
+@media (min-width: 1025px) {
+    .container {
+        width: 80%;
+    }
+
+    .title h1 {
+        font-size: 3rem; // Tamaño de fuente grande
+    }
+
+    .information h2 {
+        width: 60%;
+        font-size: 1.5rem;
+    }
+
+    .feature {
+        width: 200px; // El tamaño original de las tarjetas
+    }
+
+    .moreinfo button {
+        width: 25%; // Botón más pequeño en pantallas grandes
+    }
+}
