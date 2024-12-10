@@ -41,17 +41,17 @@ const Home = ()=>{
                 <div className='card'>
                     <div className='feature' onClick={() => handleCardClick('laptop')}>
                         <img src={laptop} alt="Laptop" />
-                        <h3>Feature 1</h3>
+                        <h3>Laptop</h3>
 
                     </div>
                     <div className='feature' onClick={() => handleCardClick('keyboard')}>
                         <img src={keyboard} alt="Keyboard" />
-                        <h3>Feature 2</h3>
+                        <h3>Keyboard</h3>
 
                     </div>
                     <div className='feature' onClick={() => handleCardClick('gpu')}>
                         <img src={gpu} alt="GPU" />
-                        <h3>Feature 3</h3>
+                        <h3>GPU</h3>
 
                     </div>
 

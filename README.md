@@ -1,3 +1,7 @@
+![Screenshot](./Screenshot/home.png)
+![Screenshot](./Screenshot/products.png)
+
+
 # Marketing Website 
 - Project Description
   This project involves creating a marketing website dedicated to highlighting the features of a technology product. The main goal is to provide a detailed overview of the product and encourage users to learn more, sign up    for additional information, and ultimately make a purchase.
